@@ -290,7 +290,6 @@ def create_staging_table(
 
     # Append audit columns at the end of every staging table
     col_defs.append(f"    {AUDIT_COLUMNS.strip()}")
-
     # Join all column definitions with commas and newlines
     columns_sql = ",\n".join(col_defs)
 

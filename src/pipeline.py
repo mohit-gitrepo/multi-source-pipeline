@@ -46,6 +46,7 @@ from extractors.sqlserver_extractor import SqlServerExtractor
 from loaders.warehouse_loader import (
     create_staging_schema,   # Creates staging schema in warehouse
     create_warehouse_db,     # Creates analytics_warehouse DB if missing
+
     get_warehouse_connection, # Returns a connection to analytics_warehouse
     load_to_warehouse,       # Loads an ExtractResult into a staging table
 )
@@ -113,6 +114,7 @@ EXTRACTION_MANIFEST = [
 
     # inventory_db — products and stock movements
     (PostgresExtractor,  "inventory_db",           "products",       "stg_pg_inv_products"),
+
     (PostgresExtractor,  "inventory_db",           "stock_movements","stg_pg_inv_movements"),
 
     # sales_db — orders only
@@ -142,8 +144,7 @@ def print_summary(results: list[dict]) -> None:
                  - target_table (str): staging table name
                  - rows_loaded (int): number of rows loaded, -1 on failure
                  - status (str): "✓ OK" or "✗ FAIL"
-                 - duration_s (float): seconds taken for this task
-    """
+                 - duration_s (float): seconds taken for this task"""
     print(f"\n{'=' * 65}")
     print(f"  PIPELINE RUN SUMMARY")
     print(f"{'=' * 65}")

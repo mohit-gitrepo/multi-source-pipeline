@@ -13,7 +13,6 @@ Environment variables required:
 """
 
 import logging
-import sys
 from dataclasses import dataclass
 
 import pyodbc
