@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned orders from dba_lab PostgreSQL source"
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['completed', 'pending', 'cancelled', 'refunded', 'processing']
+
+  - name: stg_customers
+    description: "Cleaned customers from dba_lab PostgreSQL source"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_employees
+    description: "Cleaned employees from hr_db PostgreSQL source"
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+      - name: department
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Cleaned products from dba_lab PostgreSQL source"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null

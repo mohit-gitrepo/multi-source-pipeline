@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: pipeline_staging
+    database: analytics_warehouse
+    schema: staging
+    tables:
+      - name: stg_pg_dbalab_orders
+      - name: stg_pg_dbalab_customers
+      - name: stg_pg_dbalab_products
+      - name: stg_ss_orders
+      - name: stg_ss_customers
+      - name: stg_ss_employees
+      - name: stg_ss_departments
+      - name: stg_ss_wh_products
+      - name: stg_ss_suppliers
+      - name: stg_ss_stock_movements
+      - name: stg_pg_hr_employees
+      - name: stg_pg_hr_departments
+      - name: stg_pg_inv_products
+      - name: stg_pg_inv_movements
+      - name: stg_pg_sales_orders

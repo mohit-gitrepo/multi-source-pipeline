@@ -1,0 +1,30 @@
+[0m07:22:41.316513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BD45D550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BB2B4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BE7CBC50>]}
+
+
+============================== 07:22:41.324214 | e861150d-3d68-4676-9c82-c56e7b95c9b9 ==============================
+[0m07:22:41.324214 [info ] [MainThread]: Running with dbt=1.11.7
+[0m07:22:41.324889 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\upadh\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_transforms', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m07:22:41.339128 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\upadh\.dbt
+[0m07:22:41.341136 [debug] [MainThread]: Starter project path: F:\library\anaconda3\envs\multi-source-pipeline\Lib\site-packages\dbt\include\starter_project
+[0m07:22:41.352401 [info ] [MainThread]: 
+Your new dbt project "dbt_transforms" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:22:41.353643 [info ] [MainThread]: Setting up your profile.
+[0m07:24:54.883432 [info ] [MainThread]: Profile dbt_transforms written to C:\Users\upadh\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m07:24:54.884513 [debug] [MainThread]: Command `dbt init` succeeded at 07:24:54.884373 after 133.67 seconds
+[0m07:24:54.884838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BF94D6E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BF95D250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185BE643DF0>]}
+[0m07:24:54.885155 [debug] [MainThread]: Flushing usage events
+[0m07:24:55.790197 [debug] [MainThread]: An error was encountered while trying to flush usage events
