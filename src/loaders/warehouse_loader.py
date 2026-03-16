@@ -442,4 +442,3 @@ def load_to_warehouse(result: ExtractResult) -> int:
     except psycopg.Error as e:
         logger.error("Load failed for %s: %s", result.target_table, e)
         return 0  # Return 0 — pipeline summary will show this table as failed
-    

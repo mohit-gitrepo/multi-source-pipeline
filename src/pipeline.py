@@ -47,7 +47,7 @@ from loaders.warehouse_loader import (
     create_staging_schema,   # Creates staging schema in warehouse
     create_warehouse_db,     # Creates analytics_warehouse DB if missing
 
-    get_warehouse_connection, # Returns a connection to analytics_warehouse
+    get_warehouse_connection,  # Returns a connection to analytics_warehouse
     load_to_warehouse,       # Loads an ExtractResult into a staging table
 )
 
@@ -115,7 +115,7 @@ EXTRACTION_MANIFEST = [
     # inventory_db — products and stock movements
     (PostgresExtractor,  "inventory_db",           "products",       "stg_pg_inv_products"),
 
-    (PostgresExtractor,  "inventory_db",           "stock_movements","stg_pg_inv_movements"),
+    (PostgresExtractor,  "inventory_db",           "stock_movements", "stg_pg_inv_movements"),
 
     # sales_db — orders only
     (PostgresExtractor,  "sales_db",               "orders",         "stg_pg_sales_orders"),
@@ -146,7 +146,7 @@ def print_summary(results: list[dict]) -> None:
                  - status (str): "✓ OK" or "✗ FAIL"
                  - duration_s (float): seconds taken for this task"""
     print(f"\n{'=' * 65}")
-    print(f"  PIPELINE RUN SUMMARY")
+    print("PIPELINE RUN SUMMARY")
     print(f"{'=' * 65}")
     # :<35 = left-align in 35 chars, :>12 = right-align in 12 chars
     print(f"  {'TARGET TABLE':<35} {'ROWS':>12}  {'STATUS':<10}")
