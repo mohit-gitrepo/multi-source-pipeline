@@ -50,9 +50,9 @@ jobs:
         env:
           DBT_PROFILES_DIR: .
 
-      - name: Run dbt complie
+      - name: Run dbt compile
         working-directory: dbt_transforms
-        run: dbt complie
+        run: dbt compile
         env:
           DBT_PROFILES_DIR: .
           POSTGRES_HOST: localhost
